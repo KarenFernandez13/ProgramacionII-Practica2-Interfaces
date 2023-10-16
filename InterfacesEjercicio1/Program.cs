@@ -43,7 +43,7 @@ namespace InterfacesEjercicio1
             {
                 if (seleccion == 1)
                 {
-                    Console.WriteLine("Ingrese siglas de la facutra: ");
+                    Console.WriteLine("Ingrese siglas de la factura: ");
                     string siglas = Console.ReadLine();
                     Console.WriteLine("Ingrese el número de la factura: ");
                     int numero = int.Parse(Console.ReadLine());
