@@ -26,14 +26,17 @@ namespace InterfacesEjercicio1
             //unaImpresora.Imprimir(Remito1);
 
             Impresora unaImpresora = new Impresora();
-            Console.WriteLine(" SISTEMA DE FACTURACIÓN E IMPRESIÓN ");
-            Console.WriteLine("Ingrese una opción a continuación: ");
-            Console.WriteLine("Para imprimir factura presione 1 ");
-            Console.WriteLine("Para Nota de Crédito presione 2 ");
-            Console.WriteLine("Para Recibo de Sueldo presione 3 ");
-            Console.WriteLine("Para Remito presione 4 ");
-            Console.WriteLine("Para Factura de Lux presione 5 ");
-            Console.WriteLine("Para Impuestos municipales presione 6 ");
+            Console.WriteLine(" --- SISTEMA DE FACTURACIÓN E IMPRESIÓN --- ");
+            Console.WriteLine("");
+            Console.WriteLine("Ingrese una opción para imprimir: ");
+            Console.WriteLine("");
+            Console.WriteLine(".Factura  ->  presione 1 ");
+            Console.WriteLine(".Nota de crédito  ->  presione 2 ");
+            Console.WriteLine(".Recibo de Sueldo  ->  presione 3 ");
+            Console.WriteLine(".Remito  ->  presione 4 ");
+            Console.WriteLine(".Factura de Luz  ->  presione 5 ");
+            Console.WriteLine(".Impuestos Municipales  ->  presione 6 ");
+            Console.WriteLine("");
             Console.WriteLine("Si desea salir presione 0 ");
 
             bool esNumero;
@@ -53,16 +56,26 @@ namespace InterfacesEjercicio1
             {
                 if (seleccion == 1)
                 {
+                    Console.WriteLine("Ingrese siglas de la facutra: ");
+                    string siglas = Console.ReadLine();
+                    Console.WriteLine("Ingrese el número de la factura: ");
+                    int numero = int.Parse(Console.ReadLine());
                     Console.WriteLine("Ingrese importe de la factura: ");
                     double importe = double.Parse(Console.ReadLine());
-                    Factura Factura1 = new Factura("A", 01, importe);
+                    Factura Factura1 = new Factura(siglas, numero, importe);
+                    Console.Clear();
                     unaImpresora.Imprimir(Factura1);                    
                 }
                 else if (seleccion == 2)
                 {
+                    Console.WriteLine("Ingrese siglas de la nota de crédito: ");
+                    string siglas = Console.ReadLine();
+                    Console.WriteLine("Ingrese el número de la nota de crédito: ");
+                    int numero = int.Parse(Console.ReadLine());
                     Console.WriteLine("Ingrese importe de la nota de crèdito: ");
                     double importe = Int32.Parse(Console.ReadLine());
-                    NotaCredito notaCredito1 = new NotaCredito("N", 01, importe);
+                    NotaCredito notaCredito1 = new NotaCredito(siglas, numero, importe);
+                    Console.Clear();
                     unaImpresora.Imprimir(notaCredito1);
                 }
                 else if (seleccion == 3)
@@ -72,39 +85,53 @@ namespace InterfacesEjercicio1
                     Console.WriteLine("Ingrese total de sueldo: ");
                     double totalSueldo = double.Parse(Console.ReadLine());
                     ReciboSueldo reciboSueldo1 = new ReciboSueldo(legajo, totalSueldo);
+                    Console.Clear();
                     unaImpresora.Imprimir(reciboSueldo1);
                 }
                 else if (seleccion == 4)
                 {
                     Console.WriteLine("Ingrese cantidad de bultos: ");
                     int cantidad = Int32.Parse(Console.ReadLine());
-                    Remito remito1 = new Remito(cantidad, 01);
+                    Console.WriteLine("Ingrese número de remito: ");
+                    int numero = Int32.Parse(Console.ReadLine());
+                    Remito remito1 = new Remito(cantidad, numero);
+                    Console.Clear();
                     unaImpresora.Imprimir(remito1);
                 }
                 else if (seleccion == 5)
                 {
-                    Console.WriteLine("Ingrese Importe de la Factura de Luz: ");
+                    Console.WriteLine("Ingrese el código de pago de la factura de luz: ");
+                    int codigoPago = Int32.Parse(Console.ReadLine());
+                    Console.WriteLine("Ingrese Importe de la factura de luz: ");
                     double importe = double.Parse(Console.ReadLine());
-                    FacturaLuz FacturaLuz1 = new FacturaLuz(96608, importe);
+                    FacturaLuz FacturaLuz1 = new FacturaLuz(codigoPago, importe);
+                    Console.Clear();
                     unaImpresora.Imprimir(FacturaLuz1);
                 }
                 else if (seleccion == 6)
                 {
+                    Console.WriteLine("Ingrese partida de los Impuestos Municipales: ");
+                    int partida = Int32.Parse(Console.ReadLine());
                     Console.WriteLine("Ingrese importe de los Impuestos Municipales: ");
                     double importe = double.Parse(Console.ReadLine());
-                    Municipal municipal1 = new Municipal(224675, importe);
+                    Municipal municipal1 = new Municipal(partida, importe);
+                    Console.Clear();
                     unaImpresora.Imprimir(municipal1);
                 }
-                
-                Console.ReadKey();
 
-                Console.WriteLine("Ingrese una opción a continuación: ");
-                Console.WriteLine("Para imprimir factura presione 1 ");
-                Console.WriteLine("Para Nota de Crédito presione 2 ");
-                Console.WriteLine("Para Recibo de Sueldo presione 3 ");
-                Console.WriteLine("Para Remito presione 4 ");
-                Console.WriteLine("Para Factura de Lux presione 5 ");
-                Console.WriteLine("Para Impuestos municipales presione 6 ");
+                Console.Write("Presione ENTER para continuar...");
+                Console.ReadKey();
+                Console.Clear();
+
+                Console.WriteLine("Ingrese una opción para imprimir: ");
+                Console.WriteLine("");
+                Console.WriteLine(".Factura  ->  presione 1 ");
+                Console.WriteLine(".Nota de crédito  ->  presione 2 ");
+                Console.WriteLine(".Recibo de Sueldo  ->  presione 3 ");
+                Console.WriteLine(".Remito  ->  presione 4 ");
+                Console.WriteLine(".Factura de Luz  ->  presione 5 ");
+                Console.WriteLine(".Impuestos Municipales  ->  presione 6 ");
+                Console.WriteLine("");
                 Console.WriteLine("Si desea salir presione 0 ");
 
                 do

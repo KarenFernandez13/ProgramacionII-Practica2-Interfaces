@@ -20,7 +20,7 @@ namespace InterfacesEjercicio1
         }
         public void Imprimir()
         {
-            Console.WriteLine($"Impresion de Remito: {numero} con {cantBultos} del dia {fecha}");
+            Console.WriteLine($"Impresion de Remito: {numero} con {cantBultos} bultos del dia {fecha}");
         }
     }
 }
