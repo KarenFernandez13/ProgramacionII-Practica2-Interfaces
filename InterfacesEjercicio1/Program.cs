@@ -50,7 +50,6 @@ namespace InterfacesEjercicio1
                     Console.WriteLine("Ingrese importe de la factura: ");
                     double importe = double.Parse(Console.ReadLine());
                     Factura Factura1 = new Factura(siglas, numero, importe);
-                    Factura1.total();
                     Console.Clear();
                     unaImpresora.Imprimir(Factura1);                    
                 }
@@ -59,11 +58,10 @@ namespace InterfacesEjercicio1
                     Console.WriteLine("Ingrese siglas de la nota de crédito: ");
                     string siglas = Console.ReadLine();
                     Console.WriteLine("Ingrese el número de la nota de crédito: ");
-                    int numero = int.Parse(Console.ReadLine());
+                    int numero = Int32.Parse(Console.ReadLine());
                     Console.WriteLine("Ingrese importe de la nota de crèdito: ");
-                    double importe = Int32.Parse(Console.ReadLine());
-                    NotaCredito notaCredito1 = new NotaCredito(siglas, numero, importe);
-                    notaCredito1.total();
+                    double importe = double.Parse(Console.ReadLine());
+                    NotaCredito notaCredito1 = new NotaCredito(siglas, numero, importe);                   
                     Console.Clear();
                     unaImpresora.Imprimir(notaCredito1);
                 }
