@@ -12,19 +12,6 @@ namespace InterfacesEjercicio1
     {
         static void Main(string[] args)
         {
-            //NotaCredito unaNotaCredito = new NotaCredito("NC-A", 00001, 1500);
-            //Factura unaFactura = new Factura("F-A", 00001, 1500);
-            //unaImpresora.Imprimir(unaFactura);
-            //unaImpresora.Imprimir(unaNotaCredito);
-            //FacturaLuz facturaLuz1 = new FacturaLuz(0101, 13580);
-            //unaImpresora.Imprimir(facturaLuz1);
-            //Municipal Municipal1 = new Municipal(444, 9899);
-            //unaImpresora.Imprimir(Municipal1);
-            //ReciboSueldo ReciboSueldo1 = new ReciboSueldo(212, 87654.5);
-            //unaImpresora.Imprimir(ReciboSueldo1);
-            //Remito Remito1 = new Remito(18, 069);
-            //unaImpresora.Imprimir(Remito1);
-
             Impresora unaImpresora = new Impresora();
             Console.WriteLine(" --- SISTEMA DE FACTURACIÓN E IMPRESIÓN --- ");
             Console.WriteLine("");

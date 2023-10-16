@@ -34,11 +34,7 @@ namespace InterfacesEjercicio1
         public string getSigla() { return sigla; }
         public void setSigla(string sigla) { this.sigla = sigla; }
 
-        //Metodos obligatorios
-        public  void Imprimir() // NotaCredito y Factura, imprimen de la misma forma. Entonces puedo desarrollar
-                                // todo en la clase Padre. Pero este no es el caso de los impuestos del ejercicio 6.
-                                // Es conveniente desarrollar un metodo abstracto en la clase Impuesto, para ser desarrollado
-                                // en las clases FacturaLuz y Municipal
+        public  void Imprimir()
         {
             Console.WriteLine($"Impresion de {sigla} de ${total()} del dia {fecha}");
         }
